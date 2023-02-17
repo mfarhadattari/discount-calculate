@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Calculator</title>
+
+
+    <!-- Tailwind CSS File -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="">
+    <header>
+        <h1 class="text-5xl text-white font-bold text-center  my-5 ">Discount Calculator</h1>
+    </header>
+
+    <main>
+        <section class="container mx-auto mt-10">
+            <div class="mockup-window border bg-base-300">
+                <div class="px-4 py-16 bg-base-200">
+                    <div class="w-2/5 mx-auto">
+                        <input id="price-input-field" type="text" placeholder="Enter Amount"
+                            class="input input-bordered input-secondary w-full block my-5" />
+                    </div>
+                    <div class="w-2/5 mx-auto mt-10">
+                        <h1 class="font-bold text-center text-xl">Use 'DISC30' Promo Code For Discount</h1>
+                        <input id="promo-code-field" type="text" placeholder="Enter Promo Code"
+                            class="input input-bordered input-accent block my-5 w-1/2 mx-auto" />
+                        <button id="saving-btn" class="btn btn-secondary block mx-auto w-1/2">Save 30%</button>
+                    </div>
+                </div>
+                <div id="discount-fail-message" class="hidden">
+                    <div class="alert alert-warning shadow-lg w-3/4 mx-auto">
+                        <div class="mx-auto text-gray-500 font-bold text-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6"
+                                fill="none" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                            <span>Warning: Promo Code Is Incorrect. Discount is not applicable!!!!!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-3/4 flex gap-5 mx-auto text-white font-bold text-2xl p-5">
+                    <div class="bg-rose-400 w-2/4 p-5 mx-auto rounded-xl">
+                        <h1>Discount Amount</h1>
+                        <h1 class="text-3xl">$<span id="discount-amount">000</span></h1>
+                    </div>
+                    <div class="bg-rose-400 w-2/4 p-5 mx-auto rounded-xl">
+                        <h1>Discount Price</h1>
+                        <h1 class="text-3xl">$<span id="discount-price">000</span></h1>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- js file -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
